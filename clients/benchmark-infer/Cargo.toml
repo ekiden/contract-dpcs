@@ -1,5 +1,5 @@
 [package]
-name = "benchmark-dp-credit-scoring-train"
+name = "benchmark-infer"
 version = "0.1.0"
 authors = ["Nick", "Warren"]
 

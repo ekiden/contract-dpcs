@@ -51,7 +51,7 @@ The built contract will be stored under `target/enclave/dp-credit-scoring.signed
 The example client is located under `examples/client` and it may be built using:
 ```bash
 $ pip2 install -r clients/requirements.txt
-$ cargo make --cwd clients/benchmark-dp-credit-scoring-train
+$ cargo make --cwd clients/benchmark-train
 ```
 
 ## Running the contract

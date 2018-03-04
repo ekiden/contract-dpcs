@@ -5,7 +5,6 @@ authors = ["Nick Hynes <nhynes@berkeley.edu>"]
 build = "build.rs"
 
 [lib]
-name = "dp_credit_scoring"
 crate-type = ["staticlib"]
 
 [dependencies]
@@ -27,7 +26,7 @@ ekiden-core-edl = { path = "./ekiden/core/edl" }
 
 [workspace]
 members = [
-    "./clients/benchmark-dp-credit-scoring-train",
-    # "clients/benchmark-dp-credit-scoring-infer",
+    "./clients/benchmark-train",
+    "./clients/benchmark-infer",
 ]
 exclude = ["ekiden"]
