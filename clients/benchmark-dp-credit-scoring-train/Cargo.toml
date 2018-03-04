@@ -1,0 +1,16 @@
+[package]
+name = "benchmark-dp-credit-scoring-train"
+version = "0.1.0"
+authors = ["Nick", "Warren"]
+
+[dependencies]
+client-utils = { path = "../../ekiden/clients/utils", features = ["benchmark"] }
+ekiden-core-common = { path = "../../ekiden/core/common" }
+ekiden-rpc-client = { path = "../../ekiden/rpc/client" }
+dp-credit-scoring-api = { path = "../../api" }
+clap = "2.29.1"
+futures = "0.1"
+lazy_static = "1.0"
+protobuf = "1.4.3"
+rand = "0.4"
+tokio-core = "0.1"

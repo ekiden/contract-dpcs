@@ -1,0 +1,13 @@
+[tasks.default]
+dependencies = ["build"]
+
+[tasks.build]
+command = "cargo"
+args = ["build"]
+
+[tasks.build-flow]
+dependencies = [
+    "pre-build",
+    "build",
+    "post-build",
+]
