@@ -1,0 +1,33 @@
+[package]
+name = "dp-credit-scoring"
+version = "0.1.0"
+authors = ["Nick Hynes <nhynes@berkeley.edu>"]
+build = "build.rs"
+
+[lib]
+name = "dp_credit_scoring"
+crate-type = ["staticlib"]
+
+[dependencies]
+dp-credit-scoring-api = { path = "./api" }
+ekiden-core-common = { path = "./ekiden/core/common" }
+ekiden-core-trusted = { path = "./ekiden/core/trusted" }
+ndarray = { git = "https://github.com/ekiden/rust-ndarray", features = ["serde-1"] }
+protobuf = "1.4.3"
+serde = { git = "https://github.com/ekiden/serde" }
+serde_cbor = { git = "https://github.com/ekiden/cbor" }
+serde_derive = "1.0.27"
+
+[target.'cfg(not(target_env = "sgx"))'.dependencies]
+rand = "0.4.2"
+
+[build-dependencies]
+ekiden-tools = { path = "./ekiden/tools" }
+ekiden-core-edl = { path = "./ekiden/core/edl" }
+
+[workspace]
+members = [
+    "./clients/benchmark-dp-credit-scoring-train",
+    # "clients/benchmark-dp-credit-scoring-infer",
+]
+exclude = ["ekiden"]
