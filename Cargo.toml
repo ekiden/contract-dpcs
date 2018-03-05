@@ -8,9 +8,9 @@ build = "build.rs"
 crate-type = ["staticlib"]
 
 [dependencies]
-dp-credit-scoring-api = { path = "./api" }
-ekiden-core-common = { path = "./ekiden/core/common" }
-ekiden-core-trusted = { path = "./ekiden/core/trusted" }
+dp-credit-scoring-api = { path = "api" }
+ekiden-core-common = { path = "ekiden/core/common" }
+ekiden-core-trusted = { path = "ekiden/core/trusted" }
 ndarray = { git = "https://github.com/ekiden/rust-ndarray", features = ["serde-1"] }
 protobuf = "1.4.3"
 serde = { git = "https://github.com/ekiden/serde" }
@@ -23,10 +23,3 @@ rand = "0.4.2"
 [build-dependencies]
 ekiden-tools = { path = "./ekiden/tools" }
 ekiden-core-edl = { path = "./ekiden/core/edl" }
-
-[workspace]
-members = [
-    "./clients/benchmark-train",
-    "./clients/benchmark-infer",
-]
-exclude = ["ekiden"]
